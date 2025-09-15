@@ -34,7 +34,14 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/popper.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -94,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0c07f7f5-9cb9-4669-9b29-bfbb77639614"
   }
 }
