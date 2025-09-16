@@ -11,6 +11,7 @@ import { Scooters } from '../scooters/scooters';
 import { OtherVehicle } from '../other-vehicle/other-vehicle';
 import { RentHouseAppartment } from '../rent-house-appartment/rent-house-appartment';
 import { HouseAppartment } from '../house-appartment/house-appartment';
+import { AllCategory } from '../all-category/all-category';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HouseAppartment } from '../house-appartment/house-appartment';
     Scooters,
     OtherVehicle,
     RentHouseAppartment,
-    HouseAppartment
+    HouseAppartment,
+    AllCategory
   ],
   imports: [
     BrowserModule,
