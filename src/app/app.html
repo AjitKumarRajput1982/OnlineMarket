@@ -1,27 +1,27 @@
 <nav class="navbar navbar-expand-sm bg-success navbar-dark">
-  <a class="navbar-brand" href="#">All Categories</a>  
+  <a class="navbar-brand" routerLink="#">All Categories</a>  
   <div class="collapse navbar-collapse" id="mynav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Cars</a>
+        <a class="nav-link" routerLink="cars">Cars</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Motorcycles</a>
+        <a class="nav-link" routerLink="motorcycles">Motorcycles</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Mobile Phones</a>
+        <a class="nav-link" routerLink="mobile-phones">Mobile Phones</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">For Sale: Houses & Apartments</a>
+        <a class="nav-link" routerLink="sale-house-appartment">For Sale: Houses & Apartments</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Scooters</a>
+        <a class="nav-link" routerLink="scooters">Scooters</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Commercial & Other Vehicles</a>
+        <a class="nav-link" routerLink="other-vehicle">Commercial & Other Vehicles</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">For Rent: Houses & Apartments</a>
+        <a class="nav-link" routerLink="rent-house-appartment">For Rent: Houses & Apartments</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">     
@@ -30,5 +30,5 @@
 </nav>
 
 <div class="container-fluid">
-  <h1>Welcome to Angular</h1>
+  <router-outlet></router-outlet>
 </div>
