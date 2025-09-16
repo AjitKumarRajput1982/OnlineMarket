@@ -9,6 +9,7 @@ import { OtherVehicle } from '../../usercomponent/other-vehicle/other-vehicle';
 import { RentHouseAppartment } from '../../usercomponent/rent-house-appartment/rent-house-appartment';
 import { SaleHouseAppartment } from '../../usercomponent/sale-house-appartment/sale-house-appartment';
 import { Scooters } from '../../usercomponent/scooters/scooters';
+import { Userservice } from '../../userservice/userservice';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { Scooters } from '../../usercomponent/scooters/scooters';
   imports: [
     CommonModule
   ],
-  exports:[Cars,Dashboard,HouseAppartment,MobilePhones,Motorcycles,OtherVehicle,RentHouseAppartment,SaleHouseAppartment,Scooters]
+  exports:[Cars,Dashboard,HouseAppartment,MobilePhones,Motorcycles,OtherVehicle,RentHouseAppartment,SaleHouseAppartment,Scooters],
+  providers :[Userservice]
 })
 export class UserModule { }
