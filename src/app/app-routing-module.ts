@@ -7,7 +7,8 @@ import { SaleHouseAppartment } from '../sale-house-appartment/sale-house-appartm
 import { Scooters } from '../scooters/scooters';
 import { OtherVehicle } from '../other-vehicle/other-vehicle';
 import { RentHouseAppartment } from '../rent-house-appartment/rent-house-appartment';
-import { AllCategory } from '../all-category/all-category';
+import { Dashboard } from '../dashboard/dashboard';
+
 
 const routes: Routes = [
   {path:"cars",component:Cars},
@@ -16,8 +17,9 @@ const routes: Routes = [
   {path:"sale-house-appartment",component:SaleHouseAppartment},
   {path:"scooters",component:Scooters},
   {path:"other-vehicle",component:OtherVehicle},
-  {path:"rent-house-appartment",component:RentHouseAppartment},
-  {path : "allcategory",component:AllCategory}
+  {path:"rent-house-appartment",component:RentHouseAppartment},  
+  {path:"dashboard",component:Dashboard},
+  {path: "", redirectTo:"dashboard",pathMatch:"full"}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
