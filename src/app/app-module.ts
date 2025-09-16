@@ -3,30 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Cars } from '../cars/cars';
-import { Motorcycles } from '../motorcycles/motorcycles';
-import { MobilePhones } from '../mobile-phones/mobile-phones';
-import { SaleHouseAppartment } from '../sale-house-appartment/sale-house-appartment';
-import { Scooters } from '../scooters/scooters';
-import { OtherVehicle } from '../other-vehicle/other-vehicle';
-import { RentHouseAppartment } from '../rent-house-appartment/rent-house-appartment';
-import { HouseAppartment } from '../house-appartment/house-appartment';
+import { UserModule } from '../usermodule/user/user-module';
 
 @NgModule({
   declarations: [
-    App,
-    Cars,
-    Motorcycles,
-    MobilePhones,
-    SaleHouseAppartment,
-    Scooters,
-    OtherVehicle,
-    RentHouseAppartment,
-    HouseAppartment
+    App
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
