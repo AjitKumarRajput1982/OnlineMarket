@@ -9,84 +9,88 @@
     <div class="col-lg-3 pb-3" style="background-color: #e9e6e6">
         <div class="row">     
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
-                Categories
+                LOCATION
             </div>
-            <div class="col-12 mb-3">
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Hatchback
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Sedan
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px">$ k</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        SUV (Sport Utility Vehicle)
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        MUV (Multi-Purpose Vehicle)
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                </ul>
+            <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objstate in state">
+                        <td>
+                            {{objstate.StateName}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
-                Locations
+                BRAND
             </div>
-            <div class="col-12">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Patna</li>
-                    <li class="list-group-item">New Delhi</li>
-                    <li class="list-group-item">Bihar</li>
-                </ul>
-            </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
-                Brand and Model
-            </div>
-            <div class="col-12 mb-3">
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Maruti Suzuki
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Hyundai
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px">$ k</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Tata Motors
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Kia Motors
-                        <span class="badge badge-secondary badge-pill" style="font-size: 13px"></span>
-                    </li>
-                </ul>
+           <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objcarbrand in carbrand">
+                        <td>
+                            {{objcarbrand.CarBrandName}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
-                Budget
+                BUDGET
             </div>
-            <div class="col-12">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Below 3 Lakh</li>
-                    <li class="list-group-item">3 Lakh - 6 Lakh</li>
-                    <li class="list-group-item">6 Lakh - 10 Lakh</li>
-                    <li class="list-group-item">10 Lakh - 15 Lakh</li>
-                    <li class="list-group-item">15 Lakh and Above</li>
-                </ul>
+            <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objcarbudget in carbudget">
+                        <td>
+                            {{objcarbudget.CarBudget}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
-                KM Driven
+                KM DRIVEN
             </div>
-            <div class="col-12">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Below 10,000 km</li>
-                    <li class="list-group-item">20,000 km - 30,000 km</li>
-                    <li class="list-group-item">30,000 km - 40,000 km</li>
-                    <li class="list-group-item">40,000 km - 50,000 km</li>
-                    <li class="list-group-item">60,000 km and Above</li>
-                </ul>
+            <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objcarkmdriven in carkmdriven">
+                        <td>
+                            {{objcarkmdriven.CarKMDriven}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+                NO. OF OWNERS
+            </div>
+            <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objcarnoofowner in carnoofowner">
+                        <td>
+                            {{objcarnoofowner.CarNoOfOwnerType}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+                FUEL
+            </div>
+            <div class="row">
+                <table class="table">
+                <tbody>
+                    <tr *ngFor="let objcarfuel in carfuel">
+                        <td>
+                            {{objcarfuel.CarFuelType}}
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
         </div>
     </div>

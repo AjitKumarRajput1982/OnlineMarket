@@ -1,7 +1,11 @@
 import { Component,OnInit } from '@angular/core';
-
 import { Userservice } from '../../userservice/userservice';
-
+import { Carbrand } from '../../usermodel/car/carbrand';
+import { Carbudget } from '../../usermodel/car/carbudget';
+import { Carfuel } from '../../usermodel/car/carfuel';
+import { Carkmdriven } from '../../usermodel/car/carkmdriven';
+import { Carnoofowner } from '../../usermodel/car/carnoofowner';
+import { State } from '../../usermodel/car/state';
 @Component({
   selector: 'app-cars',
   standalone: false,
@@ -9,11 +13,12 @@ import { Userservice } from '../../userservice/userservice';
   styleUrl: './cars.scss'
 })
 export class Cars  {
-  carcategory: any = [];
-  carlocation: any = [];
-  carbrandandmodel : any = [];
-  carbudget: any = [];
-  carkmdriven : any = [];
+  carbrand: Carbrand[] = [];
+  carbudget: Carbudget[] = [];
+  carfuel: Carfuel[] = [];
+  carkmdriven: Carkmdriven[] = [];
+  carnoofowner: Carnoofowner[] = [];
+  state: State[] = [];
   
 constructor(private userservice : Userservice)
 {
@@ -22,12 +27,41 @@ constructor(private userservice : Userservice)
 
 ngOnInit()
 {
-   this.carcategory = this.userservice.getcarcategory();
-   this.carlocation = this.userservice.getcarlocation();
-   this.carbrandandmodel = this.userservice.getcarbrandandmodel();
-   this.carbudget = this.userservice.getcarbudget();
-   this.carkmdriven = this.userservice.getcarkmdriven();
-}
+  this.userservice.getcarbrand().subscribe(
+    (response:Carbrand[])=>{
+      this.carbrand = response;
+    }
+   );   
 
+  this.userservice.getcarbudget().subscribe(
+    (response:Carbudget[])=>{
+      this.carbudget = response;
+    }
+   );  
+
+  this.userservice.getcarfuel().subscribe(
+    (response:Carfuel[])=>{
+      this.carfuel = response;
+    }
+   ); 
+
+  this.userservice.getcarkmdriven().subscribe(
+    (response:Carkmdriven[])=>{
+      this.carkmdriven = response;
+    }
+   ); 
+
+  this.userservice.getcarnoofowner().subscribe(
+    (response:Carnoofowner[])=>{
+      this.carnoofowner = response;
+    }
+   ); 
+
+  this.userservice.getcarstate().subscribe(
+    (response:State[])=>{
+      this.state = response;
+    }
+   );
+}
 }
 
