@@ -1,10 +1,10 @@
 export class State {
-    StateID : number
-    StateName :string;  
+    StateID : number | null;
+    StateName :string | null;  
 
-    constructor()
+    constructor(StateID : number | null = null,StateName :string | null = null)
     {
-        this.StateID = 0;
-        this.StateName = "";
+        this.StateID = StateID;
+        this.StateName = StateName;
     }
 }

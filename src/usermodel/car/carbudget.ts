@@ -1,10 +1,10 @@
 export class Carbudget {
-    CarBudgetID : number
-    CarBudget :string;  
+    CarBudgetID : number | null;
+    CarBudget :string  | null; 
 
-    constructor()
+    constructor(CarBudgetID : number | null = null,CarBudget : string | null = null)
     {
-        this.CarBudgetID = 0;
-        this.CarBudget = "";
+        this.CarBudgetID = CarBudgetID;
+        this.CarBudget = CarBudget;
     }
 }

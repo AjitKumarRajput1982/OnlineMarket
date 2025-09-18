@@ -12,7 +12,7 @@ import { State } from '../../usermodel/car/state';
   templateUrl: './cars.html',
   styleUrl: './cars.scss'
 })
-export class Cars  {
+export class Cars  { 
   carbrand: Carbrand[] = [];
   carbudget: Carbudget[] = [];
   carfuel: Carfuel[] = [];
@@ -27,42 +27,77 @@ constructor(private userservice : Userservice)
 
 ngOnInit()
 {
-  debugger;
-  this.userservice.getcarbrand().subscribe(
-    (response:Carbrand[])=>{
+  this.userservice.getcarbrand().subscribe({
+    next:(response : Carbrand[]) =>
+    {
       this.carbrand = response;
-    }
-   );   
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });
 
-  this.userservice.getcarbudget().subscribe(
-    (response:Carbudget[])=>{
+  this.userservice.getcarbudget().subscribe({
+    next:(response : Carbudget[]) =>
+    {
       this.carbudget = response;
-    }
-   );  
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });
 
-  this.userservice.getcarfuel().subscribe(
-    (response:Carfuel[])=>{
+  this.userservice.getcarfuel().subscribe({
+    next:(response : Carfuel[]) =>
+    {
       this.carfuel = response;
-    }
-   ); 
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });
 
-  this.userservice.getcarkmdriven().subscribe(
-    (response:Carkmdriven[])=>{
+  this.userservice.getcarkmdriven().subscribe({
+    next:(response : Carkmdriven[]) =>
+    {
       this.carkmdriven = response;
-    }
-   ); 
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });
 
-  this.userservice.getcarnoofowner().subscribe(
-    (response:Carnoofowner[])=>{
+  this.userservice.getcarnoofowner().subscribe({
+    next:(response : Carnoofowner[]) =>
+    {
       this.carnoofowner = response;
-    }
-   ); 
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });  
 
-  this.userservice.getcarstate().subscribe(
-    (response:State[])=>{
+   this.userservice.getcarstate().subscribe({
+    next:(response : State[]) =>
+    {
       this.state = response;
-    }
-   );
+    },
+    error:(error : any) =>
+    {
+      console.log(error)
+    },
+    complete:() => {}
+   });
 }
 }
 

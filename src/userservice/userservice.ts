@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Carbrand } from '../usermodel/car/carbrand';
 import { Carbudget } from '../usermodel/car/carbudget';
@@ -7,9 +7,16 @@ import { Carfuel } from '../usermodel/car/carfuel';
 import { Carkmdriven } from '../usermodel/car/carkmdriven';
 import { Carnoofowner } from '../usermodel/car/carnoofowner';
 import { State } from '../usermodel/car/state';
+import { provideHttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({providedIn:"root"})
 export class Userservice {
+  carbrand: Carbrand[] = [];
+  carbudget: Carbudget[] = [];
+  carfuel: Carfuel[] = [];
+  carkmdriven: Carkmdriven[] = [];
+  carnoofowner: Carnoofowner[] = [];
+  state: State[] = [];
   constructor(private httpClient : HttpClient)
   {
 
@@ -17,6 +24,7 @@ export class Userservice {
 
   public getcarbrand():Observable<Carbrand[]>
   {
+    debugger;
     return this.httpClient.get<Carbrand[]>("https://localhost:7020/api/car/getcarbrand");
   }
    
@@ -41,7 +49,7 @@ export class Userservice {
   } 
 
   public getcarstate():Observable<State[]>
-  {
+  {   
     return this.httpClient.get<State[]>("https://localhost:7020/api/car/getcarstate");
   } 
 }

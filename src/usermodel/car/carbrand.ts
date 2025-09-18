@@ -1,10 +1,10 @@
 export class Carbrand {
-    CarBrandID : number
-    CarBrandName :string;  
+    CarBrandID : number | null;
+    CarBrandName :string | null;  
 
-    constructor()
+    constructor(CarBrandID : number | null = null, CarBrandName : string | null = null)
     {
-        this.CarBrandID = 0;
-        this.CarBrandName = "";
+        this.CarBrandID = CarBrandID;
+        this.CarBrandName = CarBrandName;
     }
 }

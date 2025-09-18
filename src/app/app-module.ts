@@ -1,9 +1,9 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { UserModule } from '../usermodule/user/user-module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { UserModule } from '../usermodule/user/user-module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
