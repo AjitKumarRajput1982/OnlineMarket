@@ -10,7 +10,7 @@ import { State } from '../usermodel/car/state';
 import { provideHttpClient } from '@angular/common/http';
 
 @Injectable({providedIn:"root"})
-export class Userservice {
+export class Carservice {
   carbrand: Carbrand[] = [];
   carbudget: Carbudget[] = [];
   carfuel: Carfuel[] = [];
