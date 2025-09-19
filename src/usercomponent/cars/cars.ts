@@ -1,11 +1,11 @@
 import { Component,OnInit } from '@angular/core';
-import { Userservice } from '../../userservice/userservice';
 import { Carbrand } from '../../usermodel/car/carbrand';
 import { Carbudget } from '../../usermodel/car/carbudget';
 import { Carfuel } from '../../usermodel/car/carfuel';
 import { Carkmdriven } from '../../usermodel/car/carkmdriven';
 import { Carnoofowner } from '../../usermodel/car/carnoofowner';
 import { State } from '../../usermodel/car/state';
+import { Carservice } from '../../userservice/carservice';
 @Component({
   selector: 'app-cars',
   standalone: false,
@@ -20,14 +20,14 @@ export class Cars  {
   carnoofowner: Carnoofowner[] = [];
   state: State[] = [];
   
-constructor(private userservice : Userservice)
+constructor(private carservice :Carservice)
 {
 
 }
 
 ngOnInit()
 {
-  this.userservice.getcarbrand().subscribe({
+  this.carservice.getcarbrand().subscribe({
     next:(response : Carbrand[]) =>
     {
       this.carbrand = response;
@@ -39,7 +39,7 @@ ngOnInit()
     complete:() => {}
    });
 
-  this.userservice.getcarbudget().subscribe({
+  this.carservice.getcarbudget().subscribe({
     next:(response : Carbudget[]) =>
     {
       this.carbudget = response;
@@ -51,7 +51,7 @@ ngOnInit()
     complete:() => {}
    });
 
-  this.userservice.getcarfuel().subscribe({
+  this.carservice.getcarfuel().subscribe({
     next:(response : Carfuel[]) =>
     {
       this.carfuel = response;
@@ -63,7 +63,7 @@ ngOnInit()
     complete:() => {}
    });
 
-  this.userservice.getcarkmdriven().subscribe({
+  this.carservice.getcarkmdriven().subscribe({
     next:(response : Carkmdriven[]) =>
     {
       this.carkmdriven = response;
@@ -75,7 +75,7 @@ ngOnInit()
     complete:() => {}
    });
 
-  this.userservice.getcarnoofowner().subscribe({
+  this.carservice.getcarnoofowner().subscribe({
     next:(response : Carnoofowner[]) =>
     {
       this.carnoofowner = response;
@@ -87,7 +87,7 @@ ngOnInit()
     complete:() => {}
    });  
 
-   this.userservice.getcarstate().subscribe({
+   this.carservice.getcarstate().subscribe({
     next:(response : State[]) =>
     {
       this.state = response;

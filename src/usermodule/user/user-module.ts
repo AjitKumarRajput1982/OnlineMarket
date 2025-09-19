@@ -9,7 +9,7 @@ import { OtherVehicle } from '../../usercomponent/other-vehicle/other-vehicle';
 import { RentHouseAppartment } from '../../usercomponent/rent-house-appartment/rent-house-appartment';
 import { SaleHouseAppartment } from '../../usercomponent/sale-house-appartment/sale-house-appartment';
 import { Scooters } from '../../usercomponent/scooters/scooters';
-import { Userservice } from '../../userservice/userservice';
+import { Carservice } from '../../userservice/carservice';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,6 @@ import { Userservice } from '../../userservice/userservice';
     CommonModule
   ],
   exports:[Cars,Dashboard,HouseAppartment,MobilePhones,Motorcycles,OtherVehicle,RentHouseAppartment,SaleHouseAppartment,Scooters],
-  providers :[Userservice]
+  providers :[Carservice]
 })
 export class UserModule { }
