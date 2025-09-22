@@ -1,10 +1,9 @@
 export class State {
-    StateID : number | null;
-    StateName :string | null;  
+  stateID: number;
+  stateName: string;
 
-    constructor(StateID : number | null = null,StateName :string | null = null)
-    {
-        this.StateID = StateID;
-        this.StateName = StateName;
-    }
+  constructor(StateID: number, StateName: string) {
+    this.stateID = StateID;
+    this.stateName = StateName;
+  }
 }

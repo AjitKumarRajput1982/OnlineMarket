@@ -1,10 +1,9 @@
 export class Carnoofowner {
-    CarNoOfOwnerID : number | null;
-    CarNoOfOwnerType :string | null;  
+  carNoOfOwnerID: number;
+  carNoOfOwnerType: string;
 
-    constructor(CarNoOfOwnerID : number | null = null,CarNoOfOwnerType : string | null = null)
-    {
-        this.CarNoOfOwnerID = CarNoOfOwnerID;
-        this.CarNoOfOwnerType = CarNoOfOwnerType;
-    }
+  constructor(CarNoOfOwnerID: number, CarNoOfOwnerType: string) {
+    this.carNoOfOwnerID = CarNoOfOwnerID;
+    this.carNoOfOwnerType = CarNoOfOwnerType;
+  }
 }

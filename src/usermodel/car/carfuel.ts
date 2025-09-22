@@ -1,11 +1,9 @@
 export class Carfuel {
-    CarFuelID : number | null;
-    CarFuelType :string | null;  
+  carFuelID: number;
+  carFuelType: string;
 
-    constructor(CarFuelID : number | null = null,CarFuelType : string | null = null)
-    {
-        this.CarFuelID = CarFuelID;
-        this.CarFuelType = CarFuelType;
-    }
+  constructor(CarFuelID: number, CarFuelType: string) {
+    this.carFuelID = CarFuelID;
+    this.carFuelType = CarFuelType;
+  }
 }
-
