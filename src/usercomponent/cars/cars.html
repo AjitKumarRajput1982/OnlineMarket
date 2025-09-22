@@ -7,33 +7,33 @@
 
 <div class="row">
     <div class="col-lg-3 pb-3" style="background-color: #e9e6e6">
-        <div class="row">     
+        <div class="row">
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
                 LOCATION
             </div>
             <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objstate of state">
-                        <td>
-                            {{objstate.StateName}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of state; track data){
+                        <tr>
+                            <td>{{data.stateName}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
                 BRAND
             </div>
-           <div class="row">
+            <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objcarbrand of carbrand">
-                        <td>
-                            {{objcarbrand.CarBrandName}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of carbrand; track data){
+                        <tr>
+                            <td>{{data.carBrandName}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
@@ -41,13 +41,13 @@
             </div>
             <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objcarbudget of carbudget">
-                        <td>
-                            {{objcarbudget.CarBudget}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of carbudget; track data){
+                        <tr>
+                            <td>{{data.carBudget}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
@@ -55,13 +55,13 @@
             </div>
             <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objcarkmdriven of carkmdriven">
-                        <td>
-                            {{objcarkmdriven.CarKMDriven}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of carkmdriven; track data){
+                        <tr>
+                            <td>{{data.carKMDriven}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
@@ -69,27 +69,27 @@
             </div>
             <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objcarnoofowner of carnoofowner">
-                        <td>
-                            {{objcarnoofowner.CarNoOfOwnerType}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of carnoofowner; track data){
+                        <tr>
+                            <td>{{data.carNoOfOwnerType}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
-             <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
                 FUEL
             </div>
             <div class="row">
                 <table class="table">
-                <tbody>
-                    <tr *ngFor="let objcarfuel of carfuel">
-                        <td>
-                            {{objcarfuel.CarFuelType}}
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        @for(data of carfuel; track data){
+                        <tr>
+                            <td>{{data.carFuelType}}</td>
+                        </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>
