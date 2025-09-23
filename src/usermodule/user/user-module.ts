@@ -10,6 +10,7 @@ import { RentHouseAppartment } from '../../usercomponent/rent-house-appartment/r
 import { SaleHouseAppartment } from '../../usercomponent/sale-house-appartment/sale-house-appartment';
 import { Scooters } from '../../usercomponent/scooters/scooters';
 import { Carservice } from '../../userservice/carservice';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,20 @@ import { Carservice } from '../../userservice/carservice';
     OtherVehicle,
     RentHouseAppartment,
     SaleHouseAppartment,
-    Scooters
+    Scooters,
   ],
-  imports: [
-    CommonModule
+  imports: [CommonModule, FormsModule],
+  exports: [
+    Cars,
+    Dashboard,
+    HouseAppartment,
+    MobilePhones,
+    Motorcycles,
+    OtherVehicle,
+    RentHouseAppartment,
+    SaleHouseAppartment,
+    Scooters,
   ],
-  exports:[Cars,Dashboard,HouseAppartment,MobilePhones,Motorcycles,OtherVehicle,RentHouseAppartment,SaleHouseAppartment,Scooters],
-  providers :[Carservice]
+  providers: [Carservice],
 })
-export class UserModule { }
+export class UserModule {}

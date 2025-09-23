@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-lg-3 pb-3" style="background-color: #e9e6e6">
         <div class="row">
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 LOCATION
             </div>
             <div class="row">
@@ -16,13 +16,15 @@
                     <tbody>
                         @for(data of state; track data){
                         <tr>
-                            <td>{{data.stateName}}</td>
+                            <td style="background-color: #e9e6e6">
+                                <input type="checkbox" id="chkState" class="form-check-input" ngModel="data.stateID">{{data.stateName}}                          
+                            </td>
                         </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 BRAND
             </div>
             <div class="row">
@@ -30,13 +32,15 @@
                     <tbody>
                         @for(data of carbrand; track data){
                         <tr>
-                            <td>{{data.carBrandName}}</td>
+                           <td style="background-color: #e9e6e6">
+                                <input type="checkbox" id="chkcarbrand" class="form-check-input" ngModel="data.carBrandID">{{data.carBrandName}}                          
+                           </td>
                         </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 BUDGET
             </div>
             <div class="row">
@@ -44,13 +48,15 @@
                     <tbody>
                         @for(data of carbudget; track data){
                         <tr>
-                            <td>{{data.carBudget}}</td>
+                            <td style="background-color: #e9e6e6">
+                                 <input type="checkbox" id="chkcarBudget" class="form-check-input" ngModel="data.carBudgetID">{{data.carBudget}} 
+                            </td>
                         </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 KM DRIVEN
             </div>
             <div class="row">
@@ -58,13 +64,15 @@
                     <tbody>
                         @for(data of carkmdriven; track data){
                         <tr>
-                            <td>{{data.carKMDriven}}</td>
+                            <td style="background-color: #e9e6e6">
+                                <input type="checkbox" id="chkcarkmdriven" class="form-check-input" ngModel="data.carKMDrivenID">{{data.carKMDriven}}                          
+                           </td>
                         </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 NO. OF OWNERS
             </div>
             <div class="row">
@@ -72,13 +80,15 @@
                     <tbody>
                         @for(data of carnoofowner; track data){
                         <tr>
-                            <td>{{data.carNoOfOwnerType}}</td>
+                            <td style="background-color: #e9e6e6">
+                                <input type="checkbox" id="chkcarnoofowner" class="form-check-input" ngModel="data.carNoOfOwnerID">{{data.carNoOfOwnerType}} 
+                            </td>
                         </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <div class="col-11 mx-auto mt-1 text-white text-start pt-1 pb-2 mx-2 rounded font-weight-bold" style="background-color: #718d97; font-family: 'Arial Narrow'">
+            <div style="background-color: #718d97; font-family: 'Arial Narrow'">
                 FUEL
             </div>
             <div class="row">
@@ -86,7 +96,9 @@
                     <tbody>
                         @for(data of carfuel; track data){
                         <tr>
-                            <td>{{data.carFuelType}}</td>
+                            <td style="background-color: #e9e6e6">
+                                <input type="checkbox" id="chkcarfuel" class="form-check-input" ngModel="data.carFuelID">{{data.carFuelType}} 
+                            </td>
                         </tr>
                         }
                     </tbody>

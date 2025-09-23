@@ -8,10 +8,11 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { UserModule } from '../usermodule/user/user-module';
 import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [App],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
