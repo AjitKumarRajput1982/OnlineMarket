@@ -18,29 +18,31 @@ export class Carservice {
   carnoofowner: Carnoofowner[] = [];
   state: State[] = [];
 
+  private onlinemarket_api_url: string = 'https://localhost:7020/api/car/';
+
   constructor(private httpClient: HttpClient) {}
 
   public getcarbrand(): Observable<Carbrand[]> {
-    return this.httpClient.get<Carbrand[]>('https://localhost:7020/api/car/getcarbrand');
+    return this.httpClient.get<Carbrand[]>(this.onlinemarket_api_url + 'getcarbrand');
   }
 
   public getcarbudget(): Observable<Carbudget[]> {
-    return this.httpClient.get<Carbudget[]>('https://localhost:7020/api/car/getcarbudget');
+    return this.httpClient.get<Carbudget[]>(this.onlinemarket_api_url + 'getcarbudget');
   }
 
   public getcarfuel(): Observable<Carfuel[]> {
-    return this.httpClient.get<Carfuel[]>('https://localhost:7020/api/car/getcarfuel');
+    return this.httpClient.get<Carfuel[]>(this.onlinemarket_api_url + 'getcarfuel');
   }
 
   public getcarkmdriven(): Observable<Carkmdriven[]> {
-    return this.httpClient.get<Carkmdriven[]>('https://localhost:7020/api/car/getcarkmdriven');
+    return this.httpClient.get<Carkmdriven[]>(this.onlinemarket_api_url + 'getcarkmdriven');
   }
 
   public getcarnoofowner(): Observable<Carnoofowner[]> {
-    return this.httpClient.get<Carnoofowner[]>('https://localhost:7020/api/car/getcarnoofowner');
+    return this.httpClient.get<Carnoofowner[]>(this.onlinemarket_api_url + 'getcarnoofowner');
   }
 
   public getcarstate(): Observable<State[]> {
-    return this.httpClient.get<State[]>('https://localhost:7020/api/car/getcarstate');
+    return this.httpClient.get<State[]>(this.onlinemarket_api_url + 'getcarstate');
   }
 }
